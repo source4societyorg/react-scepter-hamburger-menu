@@ -42,9 +42,9 @@
     redux-saga "^0.16.0"
     reselect "3.0.1"
 
-"@source4society/react-scepter-navigation-hoc@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@source4society/react-scepter-navigation-hoc/-/react-scepter-navigation-hoc-1.0.0.tgz#723a97c42a1b022606fcc803130087da0661b1ed"
+"@source4society/react-scepter-navigation-hoc@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@source4society/react-scepter-navigation-hoc/-/react-scepter-navigation-hoc-1.0.4.tgz#281a87ef26a899a95fb3f4131f4fdb8e85f0572b"
   dependencies:
     "@source4society/react-authapp-container" "^1.1.0"
     "@source4society/scepter-reducer-lib" "^1.0.0"

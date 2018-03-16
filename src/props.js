@@ -16,7 +16,7 @@ export const propTypes = {
   reducerKey: PropTypes.string,
   animationDuration: PropTypes.number,
 };
-export const mapDispatchToProps = (dispatch, injectedDisplayNavigation, injectedHideNavigation) => {
+export const mapDispatchToProps = (dispatch, ownProps, injectedDisplayNavigation, injectedHideNavigation) => {
   const displayNavigationActionCreater = valueOrDefault(injectedDisplayNavigation, displayNavigation);
   const hideNavigationActionCreater = valueOrDefault(injectedHideNavigation, hideNavigation);
   return {
@@ -27,6 +27,7 @@ export const mapDispatchToProps = (dispatch, injectedDisplayNavigation, injected
       if (navigationIsHidden) {
         return dispatch(displayNavigationActionCreater(reducerKey, animationDuration));
       }
+
       return dispatch(hideNavigationActionCreater(reducerKey, animationDuration));
     },
   };
