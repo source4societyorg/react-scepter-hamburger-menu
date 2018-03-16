@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { valueOrDefault } from '@source4society/scepter-utility-lib';
 import { createStructuredSelector } from 'reselect';
-import { displayNavigation, hideNavigation, makeSelectIsHidden, makeSelectIsAnimating } from '@source4society/react-scepter-navigation-hoc';
+import { displayNavigation, hideNavigation } from '@source4society/react-scepter-navigation-hoc/lib/actions';
+import { makeSelectIsHidden, makeSelectIsAnimating } from '@source4society/react-scepter-navigation-hoc/lib/selectors';
 
 export const defaultProps = {
   reducerKey: 'navigationManager',
