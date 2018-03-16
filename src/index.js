@@ -5,9 +5,9 @@ import { propTypes, defaultProps, mapStateToProps, mapDispatchToProps } from './
 
 export class HamburgerMenu extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
-    const { navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration, toggleNavigation } = this.props;
+    const { navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration, toggleNavigation, children } = this.props;
     const clickHandler = (evt) => { evt.preventDefault(); return toggleNavigation(navigationIsHidden, navigationIsAnimating, animationDuration, reducerKey); };
-    return <children onClick={clickHandler} navigationIsHidden={navigationIsHidden} navigationIsAnimating={navigationIsAnimating} reducerKey={reducerKey} animationDuration={animationDuration} />;
+    return React.cloneElement(children, { onClick: clickHandler, navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration });
   }
 }
 

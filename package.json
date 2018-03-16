@@ -1,6 +1,6 @@
 {
   "name": "@source4society/react-scepter-hamburger-menu",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A hamburger menu that works in conjunction with react-scepter-navigation-hoc",
   "main": "lib/index.js",
   "repository": "https://github.com/source4societyorg/react-scepter-hamburger-menu.git",
