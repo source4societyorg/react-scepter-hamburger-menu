@@ -20,6 +20,7 @@ test('propTypes is set correctly', () => {
 });
 
 test('mapDispatchToProps dispatches the appropriate action creator and maps it to a prop function', () => {
+  const mockProps = { hasProperties: 'mockProps' };
   const mockDisplayNavigationAction = { hasProperties: 'mockDisplayNavigationAction' };
   const mockHideNavigationAction = { hasProperties: 'mockHideNavigationAction' };
   const mockReducerKey = 'mockReducerKey';
@@ -35,7 +36,7 @@ test('mapDispatchToProps dispatches the appropriate action creator and maps it t
     return mockHideNavigationAction;
   };
   const mockDispatch = (action) => action;
-  const dispatchObject = mapDispatchToProps(mockDispatch, mockDisplayNavigationActionCreator, mockHideNavigationActionCreator);
+  const dispatchObject = mapDispatchToProps(mockDispatch, mockProps, mockDisplayNavigationActionCreator, mockHideNavigationActionCreator);
   expect(dispatchObject.toggleNavigation(true, true, mockAnimationDuration, mockReducerKey)).toBeNull();
   expect(dispatchObject.toggleNavigation(true, false, mockAnimationDuration, mockReducerKey)).toEqual(mockDisplayNavigationAction);
   expect(dispatchObject.toggleNavigation(false, false, mockAnimationDuration, mockReducerKey)).toEqual(mockHideNavigationAction);
