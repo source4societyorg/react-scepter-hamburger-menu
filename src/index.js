@@ -7,7 +7,7 @@ export class HamburgerMenu extends React.PureComponent { // eslint-disable-line 
   render() {
     const { navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration, toggleNavigation, children } = this.props;
     const clickHandler = (evt) => { evt.preventDefault(); return toggleNavigation(navigationIsHidden, navigationIsAnimating, animationDuration, reducerKey); };
-    return React.cloneElement(children, { onClick: clickHandler, navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration });
+    return React.cloneElement(children, { onInteraction: clickHandler, navigationIsHidden, navigationIsAnimating, reducerKey, animationDuration });
   }
 }
 

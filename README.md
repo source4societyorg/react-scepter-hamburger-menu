@@ -42,3 +42,5 @@ Then add the Navigation component from [react-scepter-navigation-menu](https://g
     <NavigationMenu reducerKey={'exampleKey'} />
 
 Clicking on the hamburger icon will cause the navigation menu state for the 'exampleKey' navigation to be toggled according to the states defined in [react-scepter-navigation-hoc](https://github.com/source4societyorg/react-scepter-navigation-hoc).
+
+The prop `onClick` has been changed to `onInteraction` for the purpose of supporting SCEPTER universal UI components.

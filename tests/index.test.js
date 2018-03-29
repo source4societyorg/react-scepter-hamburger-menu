@@ -32,5 +32,5 @@ test('HamburgerMenu will render without issues', () => {
       <mockComponent />
     </HamburgerMenu>
   );
-  componentToRender.simulate('click', { preventDefault: () => null });
+  componentToRender.simulate('interaction', { preventDefault: () => null });
 });
